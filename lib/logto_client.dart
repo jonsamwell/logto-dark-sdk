@@ -242,8 +242,8 @@ class LogtoClient {
         url: signInUri.toString(),
         callbackUrlScheme: redirectUriScheme,
         options: const FlutterWebAuth2Options(
-          /// Prefer ephemeral web views without removing the Android auth
-          /// activity from history when the user switches apps.
+          /// Prefer ephemeral web sessions for the sign-in flow.
+          /// Has an effect on iOS, Android and macOS.
           preferEphemeral: true,
         ),
       );
